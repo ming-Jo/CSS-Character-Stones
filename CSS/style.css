@@ -127,7 +127,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 180px;
   position: relative;
 }
 .stone__1, .stone__2, .stone__3, .stone__4, .stone__5, .stone__6 {
