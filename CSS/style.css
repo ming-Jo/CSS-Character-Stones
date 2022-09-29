@@ -1,0 +1,464 @@
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* animation */
+@keyframes top-move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2px);
+  }
+}
+@keyframes rotate-1 {
+  from {
+    transform: rotate(7deg);
+  }
+  to {
+    transform: rotate(-7deg) translate(-5px);
+  }
+}
+@keyframes rotate-2 {
+  from {
+    transform: rotate(3deg);
+  }
+  to {
+    transform: rotate(-2deg) translate(3px);
+  }
+}
+@keyframes rotate-3 {
+  from {
+    transform: rotate(-3deg);
+  }
+  to {
+    transform: rotate(-1deg) translate(5px);
+  }
+}
+@keyframes smile {
+  0%,
+  20%,
+  70% {
+    transform: scale(1.5, 0.8);
+  }
+
+  30%,
+  50%,
+  90%,
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes smile-2 {
+  0%,
+  20%,
+  70% {
+    transform: scale(1.2, 0.9);
+  }
+
+  30%,
+  50%,
+  90%,
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes wink {
+  0%,
+  20%,
+  70% {
+    transform: scale(1.5, 0.25);
+  }
+
+  30%,
+  50%,
+  90%,
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes wink-2 {
+  0%,
+  20%,
+  70% {
+    transform: scale(1.3, 0.6);
+  }
+
+  30%,
+  50%,
+  90%,
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes wink-3 {
+  0%,
+  20%,
+  70% {
+    transform: scale(1.6, 0.6);
+  }
+
+  30%,
+  50%,
+  90%,
+  100% {
+    transform: scale(1);
+  }
+}
+:root {
+  background-color: rgb(168, 222, 255);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.stones-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 140px;
+}
+.stone__1, .stone__2, .stone__3, .stone__4, .stone__5, .stone__6 {
+  display: inline-block;
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+}
+.stone__1 {
+  animation: rotate-1 0.8s infinite alternate;
+  margin-bottom: -30px;
+  position: relative;
+}
+.stone__1::before {
+  content: '★소원이 있어요...';
+  position: absolute;
+  width: 180px;
+  font-family: 'Cafe24Ssurround';
+  font-size: 20px;
+  text-align: center;
+  top: -35px;
+  left: -10px;
+  color: black;
+  z-index: 1;
+}
+.stone__1:hover.stone__1::before {
+  display: none;
+  
+}
+.stone__1::after {
+  content: '코딩 잘하게 해주세요!!!';
+  position: absolute;
+  font-family: 'Cafe24Ssurround';
+  font-size: 24px;
+  text-align: center;
+  top: -40px;
+  left: -60px;
+  color: #EB6334;
+  z-index: 1;
+  display: none;
+}
+.stone__1:hover.stone__1::after {
+  display: inline-block;
+  width: 300px;
+}
+.stone__1 .eye {
+  position: absolute;
+  top: 0;
+  width: 7.3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: black;
+}
+.stone__1 .eye.left {
+  top: 70px;
+  left: 52px;
+}
+.stone__1 .eye.right {
+  top: 70px;
+  right: 67.5px;
+  animation: wink 3s infinite alternate;
+}
+.stone__1 .mouth {
+  position: absolute;
+  top: 90.5px;
+  left: 63.7px;
+  width: 22.7px;
+  height: 32.88px;
+  border-radius: 40% 40% 70% 70%;
+  background-color: black;
+}
+.stone__1 .glasses {
+  position: absolute;
+  top: 0;
+}
+.stone__1 .glasses .glasses-L {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 53px;
+  left: 28px;
+  border-radius: 50%;
+  border: 9px solid #EB6334;
+}
+.stone__1 .glasses .glasses-R {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 53px;
+  left: 78px;
+  border-radius: 50%;
+  border: 9px solid #EB6334;
+}
+.stone__1 .glasses .glasses-- {
+  position: absolute;
+  width: 14px;
+  height: 9px;
+  top: 70px;
+  left: 68px;
+  background-color: #EB6334;
+}
+.stone-wrap-2 {
+  margin: -35px 0;
+}
+.stone__2 {
+  position: relative;
+  top: 10px;
+  animation: rotate-2 1.3s infinite alternate;
+}
+.stone__2 .eye {
+  position: absolute;
+  top: 0;
+  width: 24px;
+  height: 6px;
+  border-radius: 40% 30% 70% 50%;
+  animation: wink 5s infinite alternate;
+  background-color: black;
+  
+}
+.stone__2 .eye.left {
+  top: 70px;
+  right: 90px;
+  transform: rotate(-10deg);
+}
+.stone__2 .eye.right {
+  top: 70px;
+  right: 40px;
+  transform: rotate(15deg);
+}
+.stone__2 .mouth {
+  position: absolute;
+  top: 90.3px;
+  right: 57px;
+  width: 35px;
+  height: 20px;
+  border-radius: 50% 50% 70% 70%;
+  background-color: black;
+}
+.stone__3 {
+  animation: rotate-3 0.8s infinite alternate;
+}
+.stone__3 .eye {
+  position: absolute;
+  top: 0;
+  width: 24px;
+  height: 6px;
+  border-radius: 40% 30% 70% 50%;
+  background-color: black;
+  animation: top-move 2s infinite alternate;
+}
+.stone__3 .eye.left {
+  top: 35px;
+  left: 35px;
+  transform: rotate(170deg);
+}
+.stone__3 .eye.right {
+  top: 35px;
+  left: 90px;
+  transform: rotate(-170deg);
+}
+.stone__3 .mouth {
+  position: absolute;
+  top: 97px;
+  left: 52px;
+  width: 44px;
+  height: 13px;
+  border-radius: 25% 25% 80% 80%;
+  background-color: black;
+  animation: smile 4s infinite alternate;
+}
+.stone__3 .glasses {
+  position: absolute;
+  top: 0;
+}
+.stone__3 .glasses .glasses-L {
+  position: absolute;
+  width: 50px;
+  height: 33px;
+  top: 53px;
+  left: 18px;
+  border-radius: 20% 30% 40% 50%;
+  background-color: #2D2A29;
+  border: 9px solid black;
+}
+.stone__3 .glasses .glasses-R {
+  position: absolute;
+  width: 50px;
+  height: 33px;
+  top: 53px;
+  left: 78px;
+  border-radius: 30% 20% 50% 40%;
+  background-color: #2D2A29;
+  border: 9px solid black;
+}
+.stone__3 .glasses .glasses-- {
+  position: absolute;
+  width: 16px;
+  height: 9px;
+  top: 60px;
+  left: 65px;
+  background-color: black;
+}
+.stone__4 {
+  animation: rotate-1 1s infinite alternate;
+}
+.stone__4 .eye {
+  position: absolute;
+  top: 0;
+  width: 7.3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: black;
+  animation: wink 5s infinite alternate;
+}
+.stone__4 .eye.left {
+  top: 52.5px;
+  right: 85.5px;
+}
+.stone__4 .eye.right {
+  top: 52.5px;
+  right: 47px;
+}
+.stone__4 .mouth {
+  position: absolute;
+  top: 77px;
+  right: 49px;
+  width: 42.5px;
+  height: 7.5px;
+  border-radius: 2.5px;
+  background-color: black;
+}
+.stone__5 {
+  animation: rotate-3 0.7s infinite alternate;
+}
+.stone__5 .eye {
+  position: absolute;
+  top: 0;
+  width: 9px;
+  height: 12px;
+  border-radius: 25%;
+  background-color: black;
+  animation: wink-2 5s infinite alternate;
+}
+.stone__5 .eye.left {
+  top: 61px;
+  left: 57px;
+}
+.stone__5 .eye.right {
+  top: 61px;
+  right: 79px;
+}
+.stone__5 .mouth {
+  position: absolute;
+  top: 98px;
+  left: 64px;
+  width: 42.5px;
+  height: 7.5px;
+  border-radius: 2.5px;
+  background-color: black;
+}
+.stone__5 .glasses {
+  position: absolute;
+  top: 0;
+}
+.stone__5 .glasses .glasses-L {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 46px;
+  left: 30px;
+  border-radius: 50%;
+  border: 5px solid darkslategrey;
+}
+.stone__5 .glasses .glasses-R {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 46px;
+  left: 90px;
+  border-radius: 50%;
+  border: 5px solid darkslategrey;
+}
+.stone__5 .glasses .glasses-- {
+  position: absolute;
+  width: 16px;
+  height: 8px;
+  top: 61px;
+  left: 76px;
+  background-color: darkslategrey;
+}
+.stone__6 {
+  animation: rotate-2 1s infinite alternate;
+}
+.stone__6 .eye {
+  position: absolute;
+  top: 0;
+  width: 7.3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: black;
+  animation: wink-3 3.8s infinite alternate;
+}
+.stone__6 .eye.left {
+  top: 52.5px;
+  left: 47px;
+}
+.stone__6 .eye.right {
+  top: 52.5px;
+  right: 73.5px;
+}
+.stone__6 .mouth {
+  position: absolute;
+  top: 70px;
+  left: 45px;
+  animation: smile-2 4s infinite alternate;
+}
+.bottom svg {
+  margin: -55px 0;
+}
+@media (max-width: 550px) {
+  .stone__1, .stone__2, .stone__3, .stone__4, .stone__5, .stone__6 {
+    display: flex;
+  }
+  .stone__2 {
+    position: relative;
+    top: 40px;
+  }
+  .stone__3 {
+    position: relative;
+    top: 20px;
+  }
+  .stone__4 {
+    position: relative;
+    top: 38px;
+  }
+  .stone__5 {
+    position: relative;
+    top: 20px;
+  }
+}
